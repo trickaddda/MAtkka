@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trickadda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="splash.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        body {
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <div id="warning-popup" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl shadow-2xl w-full max-w-lg text-center relative border-2 border-cyan-500">
+            <h2 class="text-2xl font-bold text-yellow-400 mb-4">ज़रूरी सूचना</h2>
+            <p class="text-lg text-gray-300 mb-6">
+                Trick या कोई भी tool खरीदने के बाद tool या trick deliver होने में 1 से 15 दिन का time लग सकता है इसलिए जल्दी ना करें क्योंकि हम trick या कोई भी tool खुद test करके देते है जिससे आप लोगों को आगे कोई परेशानी ना हो इसलिए इस प्रोसेस में टाइम लगता है।
+            </p>
+            <p class="text-sm text-gray-400 mb-8">
+                कोई भी trick या tool buy करने से पहले <a href="terms.html" class="text-cyan-400 underline hover:text-cyan-300">Terms & Condition</a> को ध्यान से और ज़रूर से read कर लें।
+            </p>
+            <button id="agree-btn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">मैं सहमत हूँ</button>
+        </div>
+    </div>
+
+    <div id="splash-screen">
+        <h1>Welcome to Trickadda</h1>
+        <p>This is a Private and trusted user website, not shown in google. This website works on the dark web.</p>
+    </div>
+    <header class="bg-gray-800 p-4 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+            <svg class="h-8 w-8 text-cyan-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c.83 0 1.5-.67 1.5-1.5S12.83 8 12 8s-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+            <h1 class="text-2xl font-bold text-cyan-400">Trickadda</h1>
+        </div>
+        <nav class="flex flex-wrap justify-center">
+            <a href="#home" class="bg-gray-700 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded-md mb-2 md:mb-0 md:mr-2 transition duration-300">Home</a>
+            <a href="#reviews" class="bg-gray-700 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded-md mb-2 md:mb-0 md:mr-2 transition duration-300">Reviews</a>
+            <a href="terms.html" class="bg-gray-700 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded-md mb-2 md:mb-0 md:mr-2 transition duration-300">Terms & Conditions</a>
+            <a href="about.html" class="bg-gray-700 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded-md mb-2 md:mb-0 md:mr-2 transition duration-300">About Us</a>
+            <a href="tools.html" class="bg-gray-700 hover:bg-cyan-400 text-white font-bold py-2 px-4 rounded-md transition duration-300">Tools</a>
+        </nav>
+    </header>
+
+    <main class="p-8">
+        <section id="home" class="text-center py-20 bg-gradient-to-r from-gray-800 via-gray-900 to-black">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-cyan-400 mb-4 leading-tight">Unlock the Secrets: Guaranteed Winning Tricks</h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-8">Dive into our collection of curated tricks and tips to stay ahead of the game.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <a href="tools.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 mb-4 md:mb-0 md:mr-4">View All Tricks</a>
+                    <button id="openModalBtn" class="bg-fuchsia-500 hover:bg-fuchsia-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">Open Tricks Panel</button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="trick-details" class="hidden py-20 px-4 md:px-8 bg-gray-900">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-cyan-400 mb-12">[Trick Name]</h2>
+                <div class="bg-gray-800 p-8 rounded-lg max-w-3xl mx-auto">
+                    <div class="mb-6 bg-gray-700 p-4 rounded-lg text-center">
+                        <label class="flex items-center justify-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-cyan-400 bg-gray-900 border-gray-600 focus:ring-cyan-500">
+                            <span class="ml-2 text-gray-300">I agree to the terms and understand the risks</span>
+                        </label>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 rounded-lg text-center shadow-lg">
+                            <h3 class="text-2xl font-bold text-white">Trick Price</h3>
+                            <p class="text-4xl font-bold text-white mt-2">₹499</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-lg text-center shadow-lg">
+                            <h3 class="text-2xl font-bold text-white">Delivery Duration</h3>
+                            <p class="text-4xl font-bold text-white mt-2">2 Hours</p>
+                            <p class="text-sm text-white mt-1">via WhatsApp</p>
+                        </div>
+                    </div>
+                    <form id="orderForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" id="fullName" placeholder="Full Name" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                            <input type="text" id="mobileNumber" placeholder="Mobile Number" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                            <input type="text" id="city" placeholder="Location (City)" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                            <input type="text" id="state" placeholder="State" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                        </div>
+                        <div class="text-center mt-8">
+                            <button type="submit" class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">Submit Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-gradient-to-br from-purple-900 to-indigo-900 p-8 rounded-2xl shadow-2xl w-full max-w-2xl text-center relative transform transition-all duration-300 scale-95 opacity-0" id="modal-content">
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <a href="kalyan.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">Kalyan</a>
+                <a href="main-bazar.html" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">Main Bazar</a>
+                <a href="milan-day.html" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">Milan Day</a>
+                <a href="kalyan-night.html" class="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">Kalyan Night</a>
+                <a href="allrounder-trick.html" class="col-span-1 sm:col-span-2 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">Allrounder Trick</a>
+            </div>
+        </div>
+    </div>
+        <section id="reviews" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-cyan-400 mb-12">What Our Users Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Review Card 1 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center text-white font-bold text-xl mr-4">M</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Mohan</h3>
+                                <p class="text-gray-400">Hindi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"ट्रिक अच्छी है, लेकिन कीमत बहुत ज़्यादा (overpriced) है। इतने पैसे देना हर किसी के बस की बात नहीं। थोड़ा कम रखें।"</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span class="text-gray-400 ml-2">(3/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 2 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white font-bold text-xl mr-4">AD</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Aasutosh Dhandre</h3>
+                                <p class="text-gray-400">Marathi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"ट्रिक जबरदस्त आहे, पण किंमत खूपच जास्त आहे. थोडं बजेटमध्ये ठेवा. सामान्य माणसाचा विचार करा."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span class="text-gray-400 ml-2">(3/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 3 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-xl mr-4">NS</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Neeta Sen</h3>
+                                <p class="text-gray-400">English</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"The system is brilliant, no doubt. But the price point is just too high. It's really over budget for an average person. Need a lower tier."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span class="text-gray-400 ml-2">(3/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 4 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-xl mr-4">MD</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Mayank Das</h3>
+                                <p class="text-gray-400">Gujarati</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"ટ્રિક નો ડાઉટ સચોટ છે, પણ કિંમત બહુ જ વધારે છે. (Overpriced). કિંમત ઘટાડવા માટે વિચારવું જોઈએ."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                            <span class="text-gray-400 ml-2">(3.5/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 5 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl mr-4">RK</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Rajesh Kumar</h3>
+                                <p class="text-gray-400">Hindi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"ये ट्रिक खरीदना चाहता था, पर दाम सुनकर हिम्मत टूट गई। भाई, इतना महंगा क्यों? थोड़ी किफ़ायती (affordable) बनाओ।"</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span class="text-gray-400 ml-2">(2.5/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 6 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-xl mr-4">PS</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Priya Sharma</h3>
+                                <p class="text-gray-400">English</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"Overpriced! The tricks deliver what they promise, but the entry fee is a major hurdle. Only for the big players, I guess."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span class="text-gray-400 ml-2">(3/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 7 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-xl mr-4">SJ</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Sunil Jadhav</h3>
+                                <p class="text-gray-400">Marathi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"ट्रिक पॉवरफुल आहे, पण खरं सांगायचं तर, किंमत पाहून डोळे पांढरे झाले. इतके पैसे मोजणे खूप कठीण आहे."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span class="text-gray-400 ml-2">(3/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 8 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center text-white font-bold text-xl mr-4">GP</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Gopal Patel</h3>
+                                <p class="text-gray-400">Gujarati</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"મેં ઘણી ટ્રીક જોઈ છે, પણ આના જેટલી મોંઘી કોઈ નથી. કિંમત બહુ જ વધારે હોવાથી ખરીદી શક્ય નથી. કિંમત ઘટાડો."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                            <span class="text-gray-400 ml-2">(2/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 9 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-xl mr-4">SV</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Sanjay Verma</h3>
+                                <p class="text-gray-400">Hindi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"वेबसाइट का UI बहुत क्लीन है और नेविगेशन आसान है। ट्रिक भी कमाल की निकली, 80% सक्सेस रेट सच है!🔥"</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-2">(5/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 10 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-xl mr-4">RB</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Ritu Bhasin</h3>
+                                <p class="text-gray-400">English</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"Excellent! The tricks are well-explained and the delivery was instant on WhatsApp. Very professional service and a trustworthy platform."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-2">(5/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 11 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-lime-500 flex items-center justify-center text-white font-bold text-xl mr-4">AK</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Akshay Kulkarni</h3>
+                                <p class="text-gray-400">Marathi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"खूपच छान अनुभव! मला कल्याणची ट्रिक मिळाली. ट्रिक एकदम अचूक काम करत आहे. ॲडमिनचा सपोर्ट पण खूप चांगला आहे. धन्यवाद Trickadda."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-400 ml-2">(4.5/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 12 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-xl mr-4">DS</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Dipesh Shah</h3>
+                                <p class="text-gray-400">Gujarati</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"આ વેબસાઇટનો ઇન્ટરફેસ (interface) આકર્ષક છે અને વાપરવામાં સરળ છે. મેં ઓલરાઉન્ડર ટ્રીક લીધી છે અને પરિણામ સકારાત્મક છે. 💯"</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-2">(5/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 13 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-xl mr-4">KR</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Kavita Rao</h3>
+                                <p class="text-gray-400">Hindi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"मुझे पहले डर लग रहा था, पर ट्रिक सच में काम करती है। पेमेंट और डिलीवरी प्रोसेस बहुत स्मूथ था। बहुत भरोसेमंद साइट।⭐⭐⭐⭐"</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-400 ml-2">(4.5/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 14 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold text-xl mr-4">JG</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Jatin Gupta</h3>
+                                <p class="text-gray-400">English</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"Solid value for money, even at the high price. The design of the site is premium, matching the quality of the tricks. Highly recommended."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-2">(5/5)</span>
+                        </div>
+                    </div>
+
+                    <!-- Review Card 15 -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-fuchsia-500 flex items-center justify-center text-white font-bold text-xl mr-4">VP</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Vikas Patil</h3>
+                                <p class="text-gray-400">Marathi</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4">"सर्व्हिस एकदम फास्ट आहे. मला तासाभरात माझ्या मोबाईलवर ट्रिक मिळाली. ही एक प्रीमियम (premium) वेबसाइट आहे."</p>
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-400 ml-2">(4.5/5)</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    <footer class="bg-gray-800 text-white py-12 mt-20">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- Company Info -->
+            <div>
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">Trickadda</h3>
+                <p class="text-gray-400">&copy; 2024 Trickadda. All Rights Reserved.</p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-cyan-400 transition duration-300">Home</a></li>
+                    <li><a href="#reviews" class="text-gray-400 hover:text-cyan-400 transition duration-300">Reviews</a></li>
+                    <li><a href="terms.html" class="text-gray-400 hover:text-cyan-400 transition duration-300">Terms & Conditions</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-cyan-400 transition duration-300">About Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Social Media/Contact -->
+            <div>
+                <h3 class="text-xl font-bold text-cyan-400 mb-4">Contact Us</h3>
+                <div class="flex items-center justify-center md:justify-start mb-4">
+                    <i class="fab fa-whatsapp text-green-500 text-2xl mr-2"></i>
+                    <span class="text-gray-400">+91 7500900397</span>
+                </div>
+                <div class="flex space-x-4 justify-center md:justify-start">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300"><i class="fab fa-twitter text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300"><i class="fab fa-telegram text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300"><i class="fab fa-facebook text-2xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300"><i class="fab fa-instagram text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('main section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        event.preventDefault();
+                        const targetId = href.substring(1);
+                        
+                        sections.forEach(section => {
+                            if (section.id === targetId) {
+                                section.classList.remove('hidden');
+                            } else {
+                                // Hide other sections except for home and tricks
+                                if (section.id !== 'home' && section.id !== 'tricks') {
+                                    section.classList.add('hidden');
+                                }
+                            }
+                        });
+
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            targetSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+
+    <script>
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        function showModal() {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function hideModal() {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        openModalBtn.addEventListener('click', showModal);
+        closeModalBtn.addEventListener('click', hideModal);
+
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                hideModal();
+            }
+        });
+    </script>
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const mobileNumber = document.getElementById('mobileNumber').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const state = document.getElementById('state').value.trim();
+            
+            const trickName = document.querySelector('#trick-details h2').textContent;
+            const price = document.querySelector('#trick-details .text-4xl.font-bold.text-white').textContent;
+
+            if (!fullName || !mobileNumber || !city || !state) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            const whatsappNumber = '+917500900397';
+            let message = `Hello Trickadda, I want to purchase a trick. Trick: ${trickName}, Name: ${fullName}, Mobile: ${mobileNumber}, City: ${city}, State: ${state}. Please share payment details.`;
+            
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+    <script src="splash.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const warningPopup = document.getElementById('warning-popup');
+            const agreeBtn = document.getElementById('agree-btn');
+
+            // Show the popup if it hasn't been agreed to in this session
+            if (!sessionStorage.getItem('warningAgreed')) {
+                warningPopup.classList.remove('hidden');
+            } else {
+                warningPopup.classList.add('hidden');
+            }
+
+            agreeBtn.addEventListener('click', function() {
+                warningPopup.classList.add('hidden');
+                // Use sessionStorage to remember that the user has agreed for this session
+                sessionStorage.setItem('warningAgreed', 'true');
+            });
+        });
+    </script>
+</body>
+</html>
